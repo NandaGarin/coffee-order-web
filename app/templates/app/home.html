@@ -1,0 +1,92 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block banner_slider %}
+<div id="carouselExampleSlidesOnly" class="carousel" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/bgbg1.png' %}" class="d-block w-100" alt="banner images" width="500" height="500">
+      </div>
+    </div>
+  </div>
+{% endblock banner_slider %}
+
+{% block information %}
+<div class="container">
+    <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+        <h1>Products</h1>
+        <small class="fs-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime odit quibusdam tenetur est, laboriosam inventore repudiandae. Dignissimos iusto cupiditate quam eius culpa sit, quos numquam modi? Minus veritatis odit eos?.
+
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa obcaecati molestiae accusantium architecto, cumque vero voluptatem, magni repudiandae impedit placeat velit saepe facilis commodi maiores inventore suscipit alias ut excepturi.
+        </small>
+    </div>
+</div>
+{% endblock information %}
+{% block main-content %}
+<div class="container">
+    <h2 class="text-center">Dairy Products</h2>
+    <br><br>
+    <div class="row container">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s; animation-menu: none">
+            <a href="{% url 'product-detail' '21' %}">
+            <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/Roti Daging Asap Keju.jpg' %}" class="img-responsive center-block" alt="" width="300">
+        </a> 
+            <p class="mlkpro">Roti Daging Asap Keju</p></div>
+        </div>
+       
+    
+    
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s; animation-menu: none">
+            <a href="{% url 'product-detail' '5' %}">
+            <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/Milo Dinosaurus.jpg' %}" class="img-responsive center-block" alt="" width="300">
+        </a>
+            <p class="mlkpro">Milo Dinosaurus</p></div>
+        </div>
+    
+    
+           <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s; animation-menu: none">
+            <a href="{% url 'product-detail' '8' %}">
+            <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/Oreo Shake.jpg' %}" class="img-responsive center-block" alt="" width="300">
+        </a>
+            <p class="mlkpro">Oreo Shake</p></div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row container">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s; animation-menu: none">
+            <a href="{% url 'product-detail' '15' %}">
+            <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/Oatside Matcha Latte.jpg' %}" class="img-responsive center-block" alt="" width="300">
+        </a>
+            <p class="mlkpro">Matcha Oat Latte</p></div>
+        </div>
+
+    
+    
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s; animation-menu: none">
+            <a href="{% url 'product-detail' '27' %}">
+            <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/Mocha Latte.jpg' %}" class="img-responsive center-block" alt="" width="300">
+        </a>
+            <p class="mlkpro">Mocha Latte</p></div>
+        </div>
+    
+           <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s; animation-menu: none">
+            <a href="{% url 'product-detail' '23' %}">
+            <div class="goodnessseccont text-center">
+            <img src="{% static 'app/images/product/Strawberry Cromboloni.jpg  ' %}" class="img-responsive center-block" alt="" width="300">
+        </a>
+            <p class="mlkpro">Strawberry Cromboloni</p></div>
+        </div>
+    </div>  
+</div>
+<br><br>
+{% endblock main-content %}
+

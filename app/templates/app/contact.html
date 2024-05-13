@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block banner_slider %}
+<div id="carouselExampleSlidesOnly" class="carousel" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/bgbg1.png' %}" class="d-block w-100" alt="banner images" width="500" height="500">
+      </div>
+    </div>
+  </div>
+{% endblock banner_slider %}
+
+{% block main-content%}
+<div class="container mt-3">
+    <br>
+    <h2 class="text-center">Contact Us</h2>
+    <br>
+    <div class="row-container">
+        <p class="fs-4 text-center">Address : </p>
+        <p class="fs-4 text-center">Contact : </p>
+        <p class="fs-4 text-center">Email : </p>
+
+    </div>
+</div>
+ <br><br>
+{% endblock main-content%}

@@ -3,6 +3,7 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_view 
+
 from .forms import LoginForm, MyPasswordResetForm, MyPasswordChangeForm, MySetPasswordForm
 
 urlpatterns = [
@@ -18,11 +19,22 @@ urlpatterns = [
 
     path('add-to-cart/',views.add_to_cart,name='add-to-cart'),
     path('cart/',views.show_cart,name='showcart'),
+    path('wishlist/',views.add_to_wishlist,name='wishlist'),
+    path('list/',views.show_wishlist,name='showlist'),
+
+
+    
     path('checkout/',views.checkout.as_view(),name='checkout'),
 
+    path('search/',views.search,name='search'),
     path('pluscart/',views.plus_cart),
     path('minuscart/',views.minus_cart),
+
     path('removecart/',views.remove_cart),
+    path('remove-from-wishlist/', views.remove_from_wishlist, name='remove_from_wishlist'),
+    
+    path('pluswishlist/',views.plus_wishlist),
+    path('minuswishlist/',views.minus_wishlist),
 
 
     # login authentication
@@ -40,7 +52,8 @@ urlpatterns = [
 
     path('password-reset-complete',auth_view.PasswordResetCompleteView.as_view(template_name='app/password_reset_complete.html'), name='password_reset_complete'),
 
-    #path('paymentdone/<int:',views.payment_done,name='paymentdone')
+    #payment
+    
 
 
 
